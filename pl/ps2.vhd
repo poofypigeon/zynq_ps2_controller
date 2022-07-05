@@ -48,28 +48,6 @@ architecture ps2_interface_arch of ps2_interface is
   signal sdata_tx          : std_ulogic;
 
   signal read_buffer       : std_ulogic_vector(7 downto 0);
-
-  attribute mark_debug : string;
-  attribute mark_debug of i_write_data          : signal is "true";
-  attribute mark_debug of o_read_data           : signal is "true";
-  attribute mark_debug of i_write_register_full : signal is "true";
-  attribute mark_debug of o_read_ready_irq      : signal is "true";
-  attribute mark_debug of o_busy                : signal is "true";
-  attribute mark_debug of o_tx_failed           : signal is "true";
-  attribute mark_debug of o_timeout             : signal is "true";
-  attribute mark_debug of state                 : signal is "true";
-  attribute mark_debug of delay_counter         : signal is "true";
-  attribute mark_debug of rx_counter            : signal is "true";
-  attribute mark_debug of tx_counter            : signal is "true";
-  attribute mark_debug of clear_delay           : signal is "true";
-  attribute mark_debug of clear_delay_d         : signal is "true";
-  attribute mark_debug of req_resend            : signal is "true";
-  attribute mark_debug of sclk_d                : signal is "true";
-  attribute mark_debug of sclk_negedge          : signal is "true";
-  attribute mark_debug of sclk_inhibit          : signal is "true";
-  attribute mark_debug of sdata_tx_enable       : signal is "true";
-  attribute mark_debug of sdata_tx              : signal is "true";
-  attribute mark_debug of read_buffer           : signal is "true";
 begin
 
   -- detect falling sclk edge

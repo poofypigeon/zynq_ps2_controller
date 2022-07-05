@@ -47,9 +47,6 @@ architecture axi_ps2_s_arch of axi_ps2_s is
   constant C_DECERR : std_ulogic_vector(1 downto 0) := b"11";
   
   signal write_data : std_ulogic_vector(7 downto 0);
-
-  attribute mark_debug : string;
-  attribute mark_debug of all : signal is "true";
 begin
 
   awready_state : process(i_aclk)
