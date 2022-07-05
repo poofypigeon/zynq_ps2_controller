@@ -122,10 +122,7 @@ begin
             o_busy <= '1';
             state <= TX_REQ_TO_SEND;
           elsif sclk_negedge = '1' then
-            for i in 0 to 6 loop
-              read_buffer(i) <= read_buffer(i+1);
-            end loop;
-            read_buffer(7) <= io_sdata;
+            read_buffer <= io_sdata & read_buffer(7 downto 1);
             if rx_counter = 7 then
               state <= RX_PARITY;
             end if;
